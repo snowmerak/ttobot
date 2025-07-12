@@ -368,7 +368,7 @@ func main() {
 	}, GoEnvTool)
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name:        "go_list",
+		Name:        "go_mod_list",
 		Description: "List Go packages",
 	}, GoListTool)
 

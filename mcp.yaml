@@ -4,6 +4,11 @@ servers:
     args:
       - "run"
       - "./cmd/filesystem/."
+  - name: "godoc"
+    command: "go"
+    args:
+      - "run"
+      - "./cmd/godoc/."
 ollama:
   url: "http://localhost:11434"
   model: "qwen3:14b"
