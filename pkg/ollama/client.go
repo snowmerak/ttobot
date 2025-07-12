@@ -42,10 +42,6 @@ func NewClient(opt ClientOptions) (*Client, error) {
 // SetTools sets the available tools for the client
 func (c *Client) SetTools(tools []tool.Tool) {
 	c.tools = tools
-	log.Printf("Ollama client: Set %d tools", len(tools))
-	for _, t := range tools {
-		log.Printf("  - Tool: %s (%s)", t.Name, t.Description)
-	}
 }
 
 // GetTools returns the currently available tools
