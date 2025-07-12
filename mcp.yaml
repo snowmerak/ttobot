@@ -1,39 +1,9 @@
 servers:
-  - name: "memory-server"
-    command: "npx"
+  - name: "filesystem"
+    command: "go"
     args:
-      - "-y"
-      - "@modelcontextprotocol/server-memory"
-    environment:
-      NODE_ENV: "production"
-      
-  - name: "filesystem-server"
-    command: "npx"
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-filesystem"
-      - "/Users/gwon-yongmin/GolandProjects/ttobot"
-    environment:
-      NODE_ENV: "production"
-      
-  - name: "brave-search"
-    command: "npx"
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-brave-search"
-    environment:
-      BRAVE_API_KEY: "your-brave-api-key-here"
-      
-  # Example of a custom Python MCP server (주석 처리 - 실행 문제로 인해)
-  # - name: "custom-python-server"
-  #   command: "python3"
-  #   args:
-  #     - "path/to/your/mcp_server.py"
-  #   environment:
-  #     PYTHONPATH: "/path/to/your/modules"
-  #     API_KEY: "your-api-key"
-
-# Ollama 설정
+      - "run"
+      - "./cmd/filesystem/."
 ollama:
   url: "http://localhost:11434"
-  model: "qwen3:30b"
+  model: "qwen3:14b"
